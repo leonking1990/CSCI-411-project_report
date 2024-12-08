@@ -20,7 +20,7 @@ def measure_runtime(graph, algorithm, source, target, heuristic=None):
     try:
         start_time = time.time()
         if algorithm == "dijkstra":
-            nx.single_source_dijkstra_path(graph, source) # I am using a liberty here ask if that is okay
+            nx.single_source_dijkstra_path(graph, source) 
         elif algorithm == "a_star":
             nx.astar_path(graph, source, target, heuristic=heuristic)
         return time.time() - start_time
